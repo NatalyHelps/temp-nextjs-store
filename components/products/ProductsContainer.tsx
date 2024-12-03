@@ -18,6 +18,7 @@ async function ProductsContainer({
   const searchTerm = search ? `&search=${search}` : "";
   return (
     <>
+      {/* HEADER */}
       <section>
         <div className="flex justify-between items-center">
           <h4 className="font-medium text-lg">
@@ -33,7 +34,6 @@ async function ProductsContainer({
                 <LuLayoutGrid />
               </Link>
             </Button>
-
             <Button
               variant={layout === "list" ? "default" : "ghost"}
               size="icon"
@@ -47,9 +47,10 @@ async function ProductsContainer({
         </div>
         <Separator className="mt-4" />
       </section>
+      {/* PRODUCTS */}
       <div>
         {totalProducts === 0 ? (
-          <h5 className="2xl mt-16">
+          <h5 className="text-2xl mt-16">
             Sorry, no products matched your search...
           </h5>
         ) : layout === "grid" ? (

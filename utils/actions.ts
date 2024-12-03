@@ -6,12 +6,6 @@ export const fetchFeaturedProducts = async () => {
     where: {
       featured: true,
     },
-    select: {
-      name: true,
-      id: true,
-      price: true,
-      image: true,
-    },
   });
   return products;
 };
